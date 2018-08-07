@@ -9,12 +9,16 @@
     <mt-button type="danger" size="small" @click="clickadd">{{saveA}}</mt-button>
     <mt-field label="密码" placeholder="输入密码" :value="computedNum"></mt-field>
     <div>{{arr+"a"}}</div>
+    <div>{{getters}}</div>
     <button @click="$router.push('/next')">下一页</button>
+    <div>{{testTall}}</div>
+    <!-- <div>{{teststring}}</div> -->
   </div>
 </template>
 
 <script>
 // import {MessageBox}  from 'mint-ui'
+import {mapGetters} from 'vuex'
 var flag = true
 export default {
   name: 'HelloWorld',
@@ -27,13 +31,15 @@ export default {
       username:'',
       arr:["11111","2222","33333"],
       addNum:0,
+      getters:''
     }
   },
   beforeDestroy(){
     console.log("destroy");
-    this.$messagebox.close();
+    // this.$messagebox.close();
   },
   mounted(){
+    this.getters = this.$store.getters.getpagetitle
     console.log("mounted");
   },
   computed:{
@@ -42,7 +48,13 @@ export default {
     },
     computedNum(){
       return this.arr[this.arr.length-1]
-    }
+    },
+    // set(newValue){
+    //   this.$store.state.teststring = newValue
+    // },
+    ...mapGetters([
+      'testTall'
+      ])
     // username(){
     //   console.log('test');
     //   console.log();
@@ -85,14 +97,14 @@ export default {
       // console.log(this.username);
     },
     $route(to,from,next){
-      alert(1)
+      // alert(1)
       if(from.path=='/home'){
-        alert(0)
-        console.log(this.a);
-        if(this.$messagebox){
-          console.log(this.$messagebox)
-          this.$messagebox.close()
-        }
+        // alert(0)
+        // console.log(this.a);
+        // if(this.$messagebox){
+        //   console.log(this.$messagebox)
+        //   this.$messagebox.close()
+        // }
       }
     }
   },
@@ -102,6 +114,11 @@ export default {
       console.log('start');
     },
     clickadd(){
+      this.teststring = "hank"
+      this.$nextTick(() => {
+        console.log(this.teststring)
+        console.log(this.$store.state.teststring)
+      })
       this.$set(this.arr,this.arr.length,this.addNum)
       this.addNum++
       // console.log(this);

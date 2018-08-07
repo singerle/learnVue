@@ -60,9 +60,15 @@ export default {
       }
   },
   created(){
-	console.log("created")
+    console.log("created")
+  },
+  mounted(){
+    this.$nextTick(() => {
+      console.log("aaa")
+    })
   }
-};
+}
 </script>
 
-<style type="text/css" scoped></style>
+<style type="text/css" scoped>
+</style>

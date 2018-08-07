@@ -30,7 +30,7 @@ new Vue({
 router.afterEach((to,from) => {
   console.log(from)
   // console.log(to)
-  if(from.matched[0]){
+  if(from.matched[0]&&from.matched[0].instances.default.$messagebox){
     from.matched[0].instances.default.$messagebox.close()
     //console.log(from.matched[0].instances.default.$messagebox)
   }

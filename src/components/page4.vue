@@ -15,7 +15,7 @@ export default {
   data() {
     return {
       arr: [],
-      string: "lero"
+      string: "lero",
     };
   },
   watch:{
@@ -36,22 +36,9 @@ export default {
         showCancelButton:true,
         confirmButtonClass: 'yxxt-btn'
       }).then(() => {
-        // alert(1)
-        // this.$set(this.arr,0,0)
-        // this.arr.splice(0,3,"22")
       }).catch(() => {
         alert("error")
       })
-    //   function fan(a, b) {
-    //     console.log(a);
-    //     console.log(b);
-    //     function b() {
-    //       console.log("b");
-    //     }
-    //     b();
-    //   }
-      // ((a) => fan([1,2,3,4],a))()
-    //   console.log((a => fan([1, 2, 3, 4], a))());
     }
   },
   created(){

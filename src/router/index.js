@@ -32,6 +32,24 @@ export default new Router({
     	path: '/page4',
     	name: 'page4',
     	component: (resolve) => require(['@/components/page4'],resolve),
+    },
+    {
+        path: '/wsxxIndex',
+        name: 'wsxxIndex',
+        component: (resolve) => require(['@/components/wsxx/grxx'],resolve),
+        meta:{title:"表单第一页"}
+    },
+    {
+        path: '/wsxx2',
+        name: 'wsxx2',
+        component: (resolve) => require(['@/components/wsxx/qsxx'],resolve),
+        meta:{title:"表单第二页"}
+    },
+    {
+        path: '/wsxx3',
+        name: 'wsxx3',
+        component: (resolve) => require(['@/components/wsxx/qtxx'],resolve),
+        meta:{title:"表单第三页"}
     }
   ]
 })
