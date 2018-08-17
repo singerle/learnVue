@@ -48,14 +48,14 @@ html
   width: calc(100% - .3rem)
 @media screen and (min-width:480px)
   body
-    background-color:gray
+    background-color:#ececec
 @media screen and (min-width:580px)
   body
-    background-color:yelllow
+    background-color:#f2f2f2
 @media screen and (min-width:680px)
   body
-    background-color:green
+    background-color:gray
 @media screen and (min-width:780px)
   body
-    background-color:red
+    background-color:white
 </style>

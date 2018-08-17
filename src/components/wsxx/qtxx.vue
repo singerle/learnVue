@@ -154,15 +154,15 @@
 		// 	}
 			if(this.$store.state.table3){
 				
-				var data = this.$store.state.getWsxxData
+				// var data = this.$store.state.getWsxxData
 				console.log(data);
-				if(data.cdxx.length){//数组长度不为0时通过数据加载表单
+				// if(data.cdxx.length){//数组长度不为0时通过数据加载表单
 					//根据数组的数据动态创建出表单信息，将数据交到子组件进行展示
-					this.num = data.cdxx
-				}else{
-					this.num = [{"xmpy":"","cym":"","sg":"","tz":"","tc":"","jkzk":"","hkxz":"","xx":"","hyzk":"","zjxy":"","drbgb":"","jtjg":"","ccqj":"","sfpkx":""}]
-				}
-				this.$store.commit("changeTable3",false)
+					// this.num = data.cdxx
+				// }else{
+				// 	this.num = [{"xmpy":"","cym":"","sg":"","tz":"","tc":"","jkzk":"","hkxz":"","xx":"","hyzk":"","zjxy":"","drbgb":"","jtjg":"","ccqj":"","sfpkx":""}]
+				// }
+				// this.$store.commit("changeTable3",false)
 			}
 		},
 		created(){

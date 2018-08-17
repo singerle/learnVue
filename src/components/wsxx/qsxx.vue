@@ -57,12 +57,9 @@
 			},
 			add(data){
 				this.num.push({"cyxm":"","cygx":"","lxdh":"","cynl":"","gzhxxdw":"","nsr":"","gzhxxdwdz":"","jkzk":"","dwyb":"","sfzhm":"","zy":"","id":(new Date()).getTime()})
-
-
-
 				// console.log(this.num);
 			},
-			//删除当前子组件信息页
+			//删除当前子组件信息页 
 			delChild(obj){
 				// console.log(this.num)
 				// console.log(obj)

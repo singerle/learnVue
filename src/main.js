@@ -8,9 +8,11 @@ import router from './router'
 import MintUi from 'mint-ui'
 import 'mint-ui/lib/style.css'
 import store from '@/store'
-
+import Elementui from 'element-ui'
+import 'element-ui/lib/theme-chalk/index.css';
 Vue.config.productionTip = false
 Vue.use(MintUi)
+Vue.use(Elementui)
 // router.afterEach((to,from,next) => {
 //   console.log(from)
 //   console.log(to)

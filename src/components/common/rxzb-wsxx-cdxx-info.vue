@@ -359,6 +359,7 @@ for(var a=0;a<jtjgArr.length;a++){
 				}
 			},
 			closepopu(popu) {
+				this[popu+'Slots'].defaultIndex = 1
 				this[popu] = false
 			},
 			// del(){

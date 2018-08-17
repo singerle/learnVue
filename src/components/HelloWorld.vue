@@ -96,7 +96,7 @@ export default {
       // console.log("qqqq");
       // console.log(this.username);
     },
-    $route(to,from,next){
+    '$route'(to,from,next){
       // alert(1)
       if(from.path=='/home'){
         // alert(0)

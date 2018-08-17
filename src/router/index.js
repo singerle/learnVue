@@ -50,6 +50,12 @@ export default new Router({
         name: 'wsxx3',
         component: (resolve) => require(['@/components/wsxx/qtxx'],resolve),
         meta:{title:"表单第三页"}
+    },
+    {
+        path: '/useElement',
+        name: 'elementUI',
+        component: (resolve) => require(['@/components/useElement-ui'],resolve),
+        meta:{title:"页面使用elementUI"}
     }
   ]
 })

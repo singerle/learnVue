@@ -2,9 +2,15 @@
 	<div class="two">
 		<span>{{string}}</span>
 		<button @click.default.stop="oa">add</button>
+    <ul>
+      <li v-for="(item,index) in arr" :key='index' >
+        {{item}}
+      </li>
+    </ul>
 		<router-link to="/page4">
 			<div class="mt50 ">下一页</div>
 		</router-link>
+    <div class="mt40" @click="$router.go(-1)">上一页</div>
 	</div>
 </template>
 
@@ -15,11 +21,12 @@ export default {
   name: "two",
   data() {
     return {
-      arr: [],
+      arr: [1],
+      addValue:3
     };
   },
   watch:{
-	  $route(to,from,next){
+	  'route'(to,from,next){
 		  if(to.path=='/home'&&from.path=='/next'){
 			  console.log("aaaa"); 
 		  }
@@ -38,7 +45,7 @@ export default {
       }).then(() => {
         // alert(1)
         // this.$set(this.arr,0,0)
-        // this.arr.splice(0,3,"22")
+        this.arr.splice(this.arr,this.arr.length-1,this.addValue)
       }).catch(() => {
         alert("error")
       })  
